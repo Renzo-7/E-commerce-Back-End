@@ -1,0 +1,13 @@
+[
+  {
+    "id": 2,
+    "title": "Camiseta de Boca Juniors",
+    "description": "Camiseta de jugador del equipo Boca Juniors",
+    "code": "BJ6",
+    "price": 130000,
+    "status": true,
+    "stock": 10,
+    "category": "Camiseta",
+    "thumbnails": []
+  }
+]
