@@ -1,0 +1,98 @@
+<h1 class="mb-4">Productos en Tiempo Real</h1>
+
+<div class="row">
+  <div class="col-md-8">
+    <ul id="productList" class="list-group mb-4">
+      {{#each products}}
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <strong>{{this.id}} - {{this.title}}</strong><br />
+            ${{this.price}}
+            |
+            {{this.category}}
+          </div>
+          <button
+            class="btn btn-danger btn-sm deleteProduct"
+            data-id="{{this.id}}"
+          >
+            Eliminar
+          </button>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <h2 class="h5">Agregar producto</h2>
+    <form id="addProductForm" class="needs-validation" novalidate>
+      {{! Bootstrap estilos y validación }}
+      <div class="mb-3">
+        <input
+          type="text"
+          name="title"
+          class="form-control"
+          placeholder="Título"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          name="description"
+          class="form-control"
+          placeholder="Descripción"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          name="code"
+          class="form-control"
+          placeholder="Código"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="number"
+          name="price"
+          class="form-control"
+          placeholder="Precio"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="number"
+          name="stock"
+          class="form-control"
+          placeholder="Stock"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          name="category"
+          class="form-control"
+          placeholder="Categoría"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          name="thumbnails"
+          class="form-control"
+          placeholder="Thumbnails (rutas separadas por coma)"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Agregar</button>
+    </form>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
