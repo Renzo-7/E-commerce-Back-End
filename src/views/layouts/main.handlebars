@@ -1,7 +1,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>2° entrega Back-End</title>
+    <title>Entrega Final</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,6 +16,11 @@
         <div>
           <a class="btn btn-outline-primary me-2" href="/">Home</a>
           <a class="btn btn-outline-success" href="/realtimeproducts">Real Time</a>
+          <a
+            href="/carts/682605b175bef82f3a282bf4"
+            id="cartLink"
+            class="btn btn-primary"
+          >Carrito</a>
         </div>
       </nav>
     </header>
@@ -26,7 +31,7 @@
 
     <footer class="bg-light py-3 mt-5">
       <div class="container text-center">
-        <small>&copy; 2° Entrega de Back-End</small>
+        <small>&copy; Entrega Final</small>
       </div>
     </footer>
 
@@ -35,5 +40,8 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>

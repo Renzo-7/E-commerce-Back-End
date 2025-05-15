@@ -1,0 +1,18 @@
+<h2>Tu carrito</h2>
+
+<ul id="cartList" class="list-group">
+  {{#each cart.products}}
+    <li class="list-group-item">
+      <strong>{{this.product.title}}</strong><br />
+      Cantidad:
+      {{this.quantity}}<br />
+      Precio: ${{this.product.price}}
+      <button
+        class="removeProduct btn btn-danger btn-sm"
+        data-id="{{this.product._id}}"
+      >Eliminar</button>
+    </li>
+  {{/each}}
+</ul>
+
+<button id="emptyCartBtn" class="btn btn-warning mt-3">Vaciar carrito</button>

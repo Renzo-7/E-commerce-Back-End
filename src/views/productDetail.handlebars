@@ -1,0 +1,36 @@
+<h1 class="mb-4">{{product.title}}</h1>
+
+<div class="card mb-4 w-50">
+  {{#if product.thumbnails}}
+    <img
+      src="/{{lookup product.thumbnails 0}}"
+      class="card-img-top"
+      alt="{{product.title}}"
+    />
+  {{/if}}
+
+  <div class="card-body">
+    <p class="card-text">{{product.description}}</p>
+    <p><strong>Precio:</strong> ${{product.price}}</p>
+    <p><strong>Categoría:</strong> {{product.category}}</p>
+
+    <div class="mb-3">
+      <label for="quantity-{{product._id}}" class="form-label">Cantidad:</label>
+      <input
+        type="number"
+        class="form-control quantity-input"
+        id="quantity-{{product._id}}"
+        data-product-id="{{product._id}}"
+        min="1"
+        value="1"
+      />
+    </div>
+    <button
+      class="btn btn-primary addToCart"
+      data-id="{{product._id}}"
+      data-cartid="682605b175bef82f3a282bf4"
+    >
+      Agregar al carrito
+    </button>
+  </div>
+</div>
