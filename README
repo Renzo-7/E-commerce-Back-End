@@ -1,0 +1,27 @@
+# 🛒 Ecommerce Backend con Websockets y MongoDB
+
+Este es un proyecto de backend para un ecommerce realizado con **Node.js**, **Express**, **WebSockets (Socket.io)** y **MongoDB**. Permite la gestión de productos y carritos en tiempo real.
+
+## 🚀 Funcionalidades
+
+- CRUD de productos con persistencia en MongoDB
+- Carrito de compras vinculado a cada usuario
+- Actualización en tiempo real de productos mediante WebSockets
+- Rutas API RESTful
+- Vista dinámica para ver el estado del carrito
+- Conexión a base de datos usando Mongoose
+
+## 🧑‍💻 Tecnologías utilizadas
+
+- Node.js
+- Express
+- MongoDB + Mongoose
+- Socket.io
+- Handlebars
+- Bootstrap (para estilos)
+- JavaScript (ES6)
+
+📌 Autor
+Renzo Ruarte
+www.linkedin.com/in/renzo-ruarte
+[GitHub](https://github.com/Renzo-7/Renzo-7.git)

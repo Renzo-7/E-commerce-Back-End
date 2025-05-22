@@ -8,6 +8,10 @@ import cartsRouter from "./routes/carts.router.js";
 import connectMongoDB from "./config/db.js";
 import Product from "./models/product.model.js";
 import Cart from "./models/cart.model.js";
+import dotenv from "dotenv";
+
+// Variables de entorno
+dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
@@ -92,7 +96,7 @@ io.on("connection", (socket) => {
 });
 
 // Server
-const PORT = 8080;
+const PORT = process.env.PORT;
 server.listen(PORT, () => {
   console.log("Servidor iniciado en puerto:", PORT);
 });
